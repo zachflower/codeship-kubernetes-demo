@@ -1,6 +1,6 @@
 app:
   build:
-    image: zachflower/kubernetes-demo
+    image: project-name/app-name
     dockerfile_path: Dockerfile
 google_cloud_deployment:
   image: zachflower/google-cloud-deployment
