@@ -1,0 +1,14 @@
+app:
+  build:
+    image: zachflower/kubernetes-demo
+    dockerfile_path: Dockerfile
+google_cloud_deployment:
+  image: zachflower/google-cloud-deployment
+  add_docker: true
+  encrypted_env_file: gc.env.encrypted
+  volumes:
+    - ./:/deploy
+gcr_dockercfg:
+  image: codeship/gcr-dockercfg-generator
+  add_docker: true
+  encrypted_env_file: gc.env.encrypted
