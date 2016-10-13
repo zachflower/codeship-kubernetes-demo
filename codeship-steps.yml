@@ -1,0 +1,8 @@
+- service: app
+  type: push
+  image_name: gcr.io/project-name/app-name
+  image_tag: "{{ .Timestamp }}"
+  registry: https://gcr.io
+  dockercfg_service: gcr_dockercfg
+- service: google_cloud_deployment
+  command: /deploy/deploy.sh
